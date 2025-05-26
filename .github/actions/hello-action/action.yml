@@ -1,5 +1,10 @@
-name: "Hello Action"
-description: "My first custom action"
-runs:
-  using: "node12"
-  main: "index.js"
+name: Hello GitHub Actions
+
+on: [push]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run my custom action
+        uses: ./github/actions/hello-action
